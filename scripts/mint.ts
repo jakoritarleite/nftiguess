@@ -20,7 +20,8 @@ async function main() {
   let txn = await nftIGuessContract.mintNFT();
   await txn.wait();
 
-  console.log('Minted the #1 NFT');
+  txn = await nftIGuessContract.mintNFT();
+  await txn.wait();
 }
 
 main().catch(error => {
